@@ -1,0 +1,87 @@
+{
+  "name": "memo-switch",
+  "description": "A switch that memorizes state transition events.",
+  "version": "0.0.0",
+  "main": "index",
+  "jsnext:main": "jsnext",
+  "scripts": {
+    "build": "babel src -d dist",
+    "build:watch": "babel src -d dist -w",
+    "doc": "documentation build jsnext.js --format html --output doc/reference",
+    "doc:watch": "documentation serve jsnext.js -w",
+    "flow": "flow",
+    "lint": "npm run lint:src && npm run lint:test",
+    "lint:src": "eslint src",
+    "lint:prepush": "eslint tools && eslint -c .eslintrc.no-mocha-only.yml test",
+    "lint:test": "eslint -c .eslintrc.test.yml test",
+    "parse": "npm run lint && flow",
+    "parse:watch": "nodemon --watch src --watch test --exec npm run parse",
+    "test": "npm run parse && npm run test:spec",
+    "test:watch": "nodemon --watch src --watch test --exec npm test",
+    "test:spec": "mocha $(find test/spec -type f -name '*.js' ! -path '*/data/*')"
+  },
+  "directories": {
+    "test": "test",
+    "doc": "doc",
+    "lib": "dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CureApp/memo-switch.git"
+  },
+  "engines": {
+    "node": ">=0.12"
+  },
+  "bugs": {
+    "url": "https://github.com/CureApp/memo-switch/issues"
+  },
+  "homepage": "https://github.com/CureApp/memo-switch",
+  "keywords": [
+    "event sourcing",
+    "switch",
+    "memorize",
+    "history"
+  ],
+  "author": "CureApp, Inc.",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.9.0",
+    "babel-eslint": "^6.0.4",
+    "babel-plugin-array-includes": "^2.0.3",
+    "babel-plugin-syntax-async-functions": "^6.8.0",
+    "babel-plugin-syntax-flow": "^6.8.0",
+    "babel-plugin-transform-flow-strip-types": "^6.8.0",
+    "babel-plugin-transform-function-bind": "^6.8.0",
+    "babel-plugin-transform-object-assign": "^6.8.0",
+    "babel-plugin-transform-runtime": "^6.9.0",
+    "babel-plugin-typecheck": "^3.9.0",
+    "babel-plugin-unassert": "^2.1.0",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-power-assert": "^1.0.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "babel-register": "^6.9.0",
+    "documentation": "^4.0.0-beta9",
+    "eslint": "^2",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-plugin-flow-vars": "^0.4.0",
+    "eslint-plugin-flowtype": "^2.2.7",
+    "eslint-plugin-import": "^1.8.1",
+    "eslint-plugin-jsx-a11y": "^1.4.2",
+    "eslint-plugin-mocha": "^4.0.0",
+    "eslint-plugin-react": "^5.1.1",
+    "flow-bin": "^0.29.0",
+    "ghooks": "^1.2.4",
+    "mocha": "^2.5.3",
+    "node-circleci-autorelease": "^2.1.8",
+    "nodemon": "^1.9.2",
+    "power-assert": "^1.4.1"
+  },
+  "config": {
+    "ghooks": {
+      "pre-push": "npm run lint:prepush"
+    }
+  },
+  "dependencies": {
+    "babel-runtime": "^6.9.2"
+  }
+}

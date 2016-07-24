@@ -1,0 +1,30 @@
+# dot files
+.*
+# npm https://www.npmjs.com
+node_modules
+
+
+# documentations
+/doc
+
+# test files
+/test
+
+# development tools
+/tools
+
+# CircleCI cetting https://circleci.com
+circle.yml
+
+# debug logs
+*.log
+
+# vim
+*.swp
+:
+
+# sublime text
+*.sublime-*node_modules
+
+# mac
+.DS_Store

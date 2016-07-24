@@ -1,0 +1,11 @@
+---
+extends: .eslintrc.yml
+env:
+  mocha: true
+plugins:
+  - mocha
+rules:
+  func-names: off
+  padded-blocks: off
+  prefer-arrow-callback: off
+  mocha/no-exclusive-tests: warn
