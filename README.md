@@ -1,5 +1,11 @@
 # memo-switch
-A switch that memorizes state transition events.
+A **switch** that **memorizes** state transition events.
+
+[![CircleCI](https://circleci.com/gh/CureApp/memo-switch.svg?style=svg)](https://circleci.com/gh/CureApp/memo-switch)
+[![npm version](https://badge.fury.io/js/memo-switch.svg)](http://badge.fury.io/js/memo-switch)
+[![David](https://david-dm.org/CureApp/memo-switch.svg)](https://david-dm.org/CureApp/memo-switch)
+
+[API Documentation](https://cureapp.github.io/memo-switch/reference/)
 
 ![concept.png](https://cureapp.github.io/memo-switch/images/concept.png)
 - The switch memorizes all the state transition events.
@@ -10,6 +16,7 @@ A switch that memorizes state transition events.
 ```sh
 npm install memo-switch
 ```
+
 
 # Usage
 ```js
