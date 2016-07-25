@@ -141,6 +141,25 @@ export default class MemoSwitch {
     }
 
     /**
+     * Toggle and return new instance
+     */
+    $toggle(): MemoSwitch {
+        const clone = this.clone()
+        clone.toggle()
+        return clone
+    }
+
+    /**
+     * Create a clone.
+     */
+    clone(): MemoSwitch {
+        return new MemoSwitch({
+            start: this.start.slice(),
+            diffs: this.diffs.slice()
+        })
+    }
+
+    /**
      * Calculate TimeDiff with this resolution.
      * @private
      */

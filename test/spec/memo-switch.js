@@ -291,4 +291,33 @@ describe('MemoSwitch', function () {
         })
     })
 
+    describe('$toggle()', function () {
+        it('create toggled new instance (remove)', function () {
+            const memoSwitch = MemoSwitch.initialize(true, Resolutions.YEAR)
+            assert(memoSwitch.length === 1)
+            assert(memoSwitch.isActivated === true)
+            const newSwitch = memoSwitch.$toggle()
+            assert(newSwitch.length === 0)
+            assert(newSwitch.isActivated === false)
+            assert(memoSwitch.length === 1)
+            assert(memoSwitch.isActivated === true)
+        })
+
+        it('create toggled new instance (add)', async function () {
+            const memoSwitch = MemoSwitch.initialize(true, Resolutions.MILLISECOND)
+            assert(memoSwitch.length === 1)
+            assert(memoSwitch.isActivated === true)
+            await wait(1)
+            const newSwitch = memoSwitch.$toggle()
+
+            assert(newSwitch.length === 2)
+            assert(newSwitch.diffs[1] > 0)
+            assert(newSwitch.diffs[1] < 100)
+            assert(newSwitch.isActivated === false)
+
+            assert(memoSwitch.length === 1)
+            assert(memoSwitch.isActivated === true)
+        })
+    })
+
 })
