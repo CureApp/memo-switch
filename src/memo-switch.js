@@ -14,7 +14,7 @@ type TimeStamp = number
 type ResoTime = Array<number>
 type ResoTimeDiff = number
 type DateArg = number|string|Date
-type Resolution = 1|2|3|4|5|6|7
+type Resolution = number
 type Args = {
     start: ResoTime,
     diffs: Array<ResoTimeDiff>,
