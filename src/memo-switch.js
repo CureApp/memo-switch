@@ -51,7 +51,7 @@ export default class MemoSwitch {
      * Create a new instance.
      * @param {number} resolution
      */
-    static initialize(isActivatedByDefault: boolean = false, resolution:Resolution = Resolutions.MINUTE): MemoSwitch {
+    static initialize(isActivatedByDefault: boolean = false, resolution: Resolution = Resolutions.MINUTE): MemoSwitch {
         const start = toResoTime(new Date(), resolution)
         const diffs = isActivatedByDefault ? [0] : []
         return new MemoSwitch({ start, diffs })
@@ -128,7 +128,8 @@ export default class MemoSwitch {
         const last = this.diffs[this.length - 1]
         if (last === diff) {
             this.diffs.pop()
-        } else {
+        }
+        else {
             this.diffs.push(diff)
         }
         return this.isActivated
@@ -208,7 +209,8 @@ export default class MemoSwitch {
 
             if (val < timeDiff) {
                 left = i
-            } else {
+            }
+            else {
                 right = i
             }
         }

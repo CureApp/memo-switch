@@ -15,7 +15,9 @@ plugins:
   - react
   - flowtype
   - flow-vars
+  - import
 rules:
+  brace-style: [error, stroustrup, { "allowSingleLine": true }]
   comma-dangle: off
   max-len:
     - error
@@ -68,7 +70,14 @@ rules:
 
   flow-vars/define-flow-type: 1
   flow-vars/use-flow-type: 1
+  no-duplicate-imports: 0
+  import/no-duplicates: 1
+  import/extensions: 1
+  react/jsx-filename-extension: 0
+  react/require-extension: 0
+  react/jsx-no-bind: 0
 
 settings:
   flowtype:
     onlyFilesWithFlowAnnotation: false
+  import/core-modules: [ electron ]
