@@ -68,7 +68,6 @@ export default class MemoSwitch {
     /**
      * Resolution of this memoSwitch. It depends on `this.start.length`.
      */
-    // $FlowGetterSetterIssue
     get resolution(): Resolution {
         if (this.start.length > 7) {
             throw new Error('invalid resolution (this.start.length > 7)')
@@ -79,7 +78,6 @@ export default class MemoSwitch {
     /**
      * Start date (Date)
      */
-    // $FlowGetterSetterIssue
     get startDate(): Date {
         return toDate(this.start)
     }
@@ -87,22 +85,18 @@ export default class MemoSwitch {
     /**
      * Start time (timestamp)
      */
-    // $FlowGetterSetterIssue
     get startTime(): TimeStamp {
         return toDate(this.start).getTime()
     }
 
-    // $FlowGetterSetterIssue
     get isActivated(): boolean {
         return this.diffs.length % 2 === 1
     }
 
-    // $FlowGetterSetterIssue
     get length(): number {
         return this.diffs.length
     }
 
-    // $FlowGetterSetterIssue
     get lastTime(): ?TimeStamp {
         return this.calcTimeByDiff(this.diffs[this.length - 1])
     }
