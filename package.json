@@ -71,7 +71,7 @@
     "eslint-plugin-react": "^5.1.1",
     "flow-bin": "^0.29.0",
     "ghooks": "^1.2.4",
-    "mocha": "^2.5.3",
+    "mocha": "^3.0.2",
     "node-circleci-autorelease": "^2.1.8",
     "nodemon": "^1.9.2",
     "power-assert": "^1.4.1"
