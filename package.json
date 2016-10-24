@@ -64,7 +64,7 @@
     "eslint": "^2",
     "eslint-config-airbnb": "^9.0.1",
     "eslint-plugin-flow-vars": "^0.4.0",
-    "eslint-plugin-flowtype": "^2.2.7",
+    "eslint-plugin-flowtype": "^2.22.0",
     "eslint-plugin-import": "^1.8.1",
     "eslint-plugin-jsx-a11y": "^1.4.2",
     "eslint-plugin-mocha": "^4.0.0",
